@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>Tarea 7</title>
+        <link href="Utilidad/estilo.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <center>
+        <a href="tarea6.html" class="button">- Anterior -</a>
+        <a href="menu-tareas.html" class="button">- Menu Tareas -</a>
+        <a href="tarea8.html" class="button">- Siguiente -</a>
+        </center>
+        <div>
+            <br>
+            <center><n class="titulo">Scheme</n></center><br>
+            <n>Tarea #7</n><br>
+            <br>
+            <pre class="texto">
+<n>Sintaxis</n>
+
+Scheme posee una sintaxis reducida comparada a otros lenguajes. Utiliza la notación prefija. 
+Por ejemplo, si se desea realizar la suma 1+1, se debe programar la siguiente instrucción
+(+ 1 1) 
+
+Los paréntesis son obligatorios, ya que separan las instrucciones que serán 
+evaluadas por el intérprete. 
+Para realizar comentarios dentro del código, se utiliza el ";", así se marca que toda la línea será de comentario Ejemplo:
+;Esta línea es un comentario, y la orden de abajo es ejecutada 
+(+ 1 1)
+
+
+<n>Sintaxis Básica</n>
+    
+Expresión -> átomo | lista
+átomo -> número | string | identificador | carácter | boolean
+lista -> '(' secuencia-expresión ')'
+secuencia-expresión -> expresión secuencia - expresión | expresión
+función -> ( nombre_función argumento1 argumento 2... argumento n)
+
+
+<n>Variables locales y globales</n>
+    
+Las variables son dinámicamente tipadas. Dicho de otra forma, no se debe especificar lo que se va a guardar dentro de la misma. 
+Las variables globales se nombran con la instrucción (define nombre valor) Por ejemplo,
+ (define variable 5) 
+
+Por otro lado, las variables locales se definen con la instrucción ( let variables función). 
+Por ejemplo: sumar dos números guardados en una variable local
+ (let 
+ ;variables de la operación 
+ ((numero1 5) 
+ (numero2 7)) 
+ ;instrucción que suma los números, es decir, la función 
+ (+ numero1 numer2))
+ 
+
+<n>Aplicación a descargar para editar y ejecutar Scheme</n>
+
+La aplicación para trabajar con el lenguaje de programación Haskell es DrScheme, es un IDE muy completo y útil para esta tarea.
+
+
+<n>Paradigma de Scheme</n>
+
+Scheme es un lenguaje de programación de paradigma funcional. 
+
+
+<n>Ejemplo de programa en Scheme</n>
+    
+Este es un programa que imprime un triángulo:
+ 
+(define (T) (display "*"))
+
+(define (dibuje cant)
+   (do ((i 0 (+ i 1)))
+       ((= i cant) )
+     (t)
+     (display " ")))
+
+(define (triangulo) ;y esta es la que me dibuja el triangulo aquí defino ;que el tamaño sea de 10 *'s
+   (do ((i 1 (+ i 1)));observa como se hace el ciclo :D
+         ((= i 10) )
+     (dibuje i);llamada a la funcion
+     (newline)));pasa renglon
+
+            </pre>
+        </div>
+    </body>
+</html>

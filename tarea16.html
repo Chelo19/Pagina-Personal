@@ -1,0 +1,114 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>Tarea 16</title>
+        <link href="Utilidad/estilo.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <center>
+        <a href="tarea15.html" class="button">- Anterior -</a>
+        <a href="menu-tareas.html" class="button">- Menu Tareas -</a>
+        <a href="tarea17.html" class="button">- Siguiente -</a>
+        </center>
+        <div>
+            <br>
+            <center><n class="titulo">Conversión de Temperatura</n></center><br>
+            <n>Tarea #16</n><br>
+            <br>
+            <pre>
+            <n>El codigo del programa es el siguiente: </n>
+
+/*
+Marcelo Amado De Leon Gomez 2077432
+Lenguajes de Programacion Hora: V4-V6
+Grupo: 009
+Tarea 16
+*/
+
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+public class Tarea16{
+	public static float conversionCaF(){
+		Scanner lec = new Scanner(System.in);
+		float gradosC, gradosF;
+		System.out.println();		//por estetica
+		System.out.print("Por favor, ingrese la cantidad de grados en C: ");
+		gradosC = lec.nextFloat();
+		System.out.println();		//por estetica
+		gradosF = (gradosC * 1.8f) + 32f;
+		System.out.println("El resultado es de: " + gradosF + " grados Farenheit");
+		System.out.println();		//por estetica
+		return 0;
+	}
+	public static float conversionFaC(){
+		Scanner lec = new Scanner(System.in);
+		float gradosC, gradosF;
+		System.out.println();		//por estetica
+		System.out.print("Por favor, ingrese la cantidad de grados en F: ");
+		gradosF = lec.nextFloat();
+		gradosC = (gradosF - 32f) * 0.55f;
+		System.out.println();		//por estetica
+		System.out.println("El resultado es de: " + gradosC + " grados Celsius");
+		System.out.println();		//por estetica
+		return 0;
+	}
+	public static void main(String[] args){
+		Scanner lec = new Scanner(System.in);
+		int salida = 0;
+		do{
+			String[] options = {"C -> F", "F -> C"};
+			int x = JOptionPane.showOptionDialog(null, "Que conversion desea aplicar?",
+				"Pulse una opcion",
+				JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, options, options[0]);
+			if(x == 0){
+				System.out.println();		//por estetica
+				System.out.println("Has decidido aplicar la conversion de C a F");
+				conversionCaF();
+			}
+			else{
+				System.out.println();		//por estetica
+				System.out.println("Has decidido aplicar la conversion de F a C");
+				conversionFaC();
+			}
+			System.out.println();		//por estetica
+			System.out.print("Deseas volver a ejecutar el programa? (| 1 = Si || 0 = No |): ");
+			salida = lec.nextInt();
+		}while(salida != 0);
+	}
+}
+           
+
+            <n>El resultado de la ejecucion de este codigo es el siguiente:</n>
+
+
+            <img src="Imagenes del compilador/Tarea 16/1.JPG" alt=""/>
+ 
+
+            <n>En caso de elegir la conversion de C a F: </n>
+
+
+            Has decidido aplicar la conversion de C a F
+
+            Por favor, ingrese la cantidad de grados en C: 43.5
+
+            El resultado es de: 110.3 grados Farenheit
+
+
+            Deseas volver a ejecutar el programa? (| 1 = Si || 0 = No |):
+
+
+            <n>O en caso de elegir la conversion contraria: </n>
+
+
+            Has decidido aplicar la conversion de F a C
+
+            Por favor, ingrese la cantidad de grados en F: 105
+
+            El resultado es de: 40.15 grados Celsius
+
+
+            Deseas volver a ejecutar el programa? (| 1 = Si || 0 = No |):
+            </pre>
+        </div>
+    </body>
+</html>

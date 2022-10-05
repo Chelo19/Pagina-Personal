@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>Tarea 10</title>
+        <link href="Utilidad/estilo.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <center>
+        <a href="tarea9.html" class="button">- Anterior -</a>
+        <a href="menu-tareas.html" class="button">- Menu Tareas -</a>
+        <a href="tarea11.html" class="button">- Siguiente -</a>
+        </center>
+        <div>
+            <br>
+            <center><n class="titulo">Gödel</n></center><br>
+            <n>Tarea #10</n><br>
+            <br>
+            <pre class="texto">
+<n>Simbología</n>
+
+Símbolos lógicos	Números 1:12
+¬                                          1 ("no")
+(                                           6
+)                                           7
+S                                          8 ("es el sucesor de")
+0                                          9
+=                                          10
+.                                           11
++                                          12
+Símbolos proposicionales	Números más grandes que 12 y divisibles por 3
+P                                          12
+Q                                          15
+R                                          18
+S                                           21
+Variables individuales	Números más grandes que 12 con resto 1 cuando se dividen por 3
+v                                           13
+x                                           16
+y                                           19
+Símbolos de predicado	Números más grandes que 12 con resto 2 cuando se dividen por 3
+E                                           14
+F                                           17
+G                                           20
+
+<n>IDE para editar y ejecutar Gödel</n>
+    
+Para compilar en Gödel, debido a que el compilador de Gödel compila el código fuente en el código fuente de Prolog, se usará el mismo IDE con el que trabajamos en Prolog.
+SWI-Prolog
+
+<img src="Imagenes del compilador/Tarea 10/1.png" alt="">
+
+SWI-Prolog es una implementación en código abierto (en inglés, open source) del lenguaje de programación Prolog. Su autor principal es Jan Wielemaker. En desarrollo ininterrumpido desde 1987, SWI-Prolog posee un rico conjunto de características, bibliotecas (incluyendo su propia biblioteca para GUI, XPCE), herramientas (incluyendo un IDE) y una documentación extensiva. SWI-Prolog funciona en las plataformas Unix, Windows y Macintosh.
+El nombre SWI deriva de Sociaal-Wetenschappelijke Informatica ("Informática de Ciencias Sociales"), el antiguo nombre de un grupo de investigación en la Universidad de Ámsterdam en el que Wielemaker está integrado. El nombre de ese grupo se cambió posteriormente a HCS (Human-Computer Studies).
+
+<n>¿A qué tipo de paradigma pertenece?</n>
+
+El lenguaje de programación Gödel es un lenguaje de programación declarativo, adherido al paradigma de la programación lógica.
+
+<n>Un ejemplo de un programa escrito en ese lenguaje</n>
+
+El siguiente ejemplo es una especificación del máximo común divisor (MCD) de dos números.
+MODULE      MCD.
+IMPORT      Integers.
+ 
+PREDICATE   Mcd : Integer * Integer * Integer.
+Mcd(i,j,d) <- 
+           DivisorComun(i,j,d) &
+           ~ SOME [e] (DivisorComun(i,j,e) & e > d).
+ 
+PREDICATE   DivisorComun : Integer * Integer * Integer.
+DivisorComun(i,j,d) <-
+           IF (i = 0 \/ j = 0)
+           THEN
+             d = Max(Abs(i),Abs(j))
+           ELSE
+             1 =< d =< Min(Abs(i),Abs(j)) &
+             i Mod d = 0 &
+             j Mod d = 0.
+
+
+            </pre>
+        </div>
+    </body>
+</html>

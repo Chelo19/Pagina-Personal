@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>Tarea 6</title>
+        <link href="Utilidad/estilo.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <center>
+        <a href="tarea5.html" class="button">- Anterior -</a>
+        <a href="menu-tareas.html" class="button">- Menu Tareas -</a>
+        <a href="tarea7.html" class="button">- Siguiente -</a>
+        </center>
+        <div>
+            <br>
+            <center><n class="titulo">Python</n></center><br>
+            <n>Tarea #6</n><br>
+            <br>
+            <n>Modo interactivo y modo script</n><br>
+<br>
+            Hay dos maneras de trabajar con Python, mediante el modo interactivo y mediante el modo script. En el primero, ejecutamos la orden en tiempo real, mientras que con el segundo, escribimos el código en Python y luego lo ejecutamos con el intérprete.<br>
+            En el modo interactivo, debemos activar el intérprete Python escribiendo python en la línea de comandos. Una vez puesto en marcha, ya podemos ejecutar órdenes, como la clásica print “Hello, Python!”.<br>
+            A medida que empecemos a programar empleando el lenguaje Python, nos será más práctico emplear un script donde hemos introducido todas las órdenes a ejecutar. Así, una vez situada la línea de comandos en la carpeta donde se encuentra el script, lo ejecutamos con la orden python nombredelscript.py.<br>
+<br>
+            <n>Identificadores Python</n><br>
+<br>
+            Los identificadores sirven precisamente para eso, para identificar una variable, función, clase, módulo u objeto. Suelen empezar con letras, en mayúscula o minúscula, o con un guión bajo seguido de un cero y varias letras o números.<br>
+            Hay que tener varias cosas en cuenta, como que Python diferencia entre mayúsculas y minúsculas o que no admite caracteres de puntuación como @, $ o %.
+            Los nombres de clase empiezan con una letra mayúscula. Los demás identificadores empiezan con minúscula. Si el identificador empieza un guión bajo, significa que es privado. Si empieza con dos guiones bajos, se trata de un identificador privado. Si el identificador finaliza con dos guiones bajos, el identificador es un nombre especial definido por lenguaje.<br>
+<br>
+            <n>Palabras reservadas</n><br>
+<br>
+            Hay una serie de palabras que no podemos emplear como constantes o variables o como nombre identificador. Son todas en minúsculas y han sido reservadas por el lenguaje Python.<br>
+            En concreto, las palabras reservadas son: and, assert, break, class, continue, def, del, elif, else, except, exec, finally, for, from, global, if, imoort, in, is, lambda, not, or, pass, print, raise, return, try, while, with, yield.<br>
+            Estructura de las líneas<br>
+<br>
+            Un programa codificado con lenguaje Python está dividido en varias líneas lógicas y cada una de ellas finaliza con una nueva línea. Si la línea está en blanco, es ignorada por el intérprete de Python.<br>
+<br>
+            <n>Comentarios y citas</n><br>
+<br>
+            En Python, los comentarios empiezan con el carácter hash (#). Nosotros podemos leernos, es más, deberíamos, ya que nos aportarán información sobre el resto de código, pero el intérprete lo ignorará.<br>
+            En cuanto a las citas, Python admite las comillas simples o dobles.<br>
+<br>
+            <n>Esqueleto en Python</n><br>
+<br>
+            #include <'stdio.h'><br>
+<br>
+            int main(void) {<br>
+            }<br>
+<br>
+            <n>Python paradigma</n><br>
+            <br>
+            El lenguaje de programación Python pertenece al tipo de paradigma “multiparadigma”.<br>
+<br>
+            <n>Aplicación para editar y ejecutar Python</n><br><br>
+            PyCharm es un famoso IDE que además cuenta con una versión para las distribuciones Gnu/Linux, lo que hace que sea más sencillo aún su utilización y creación de programas con este lenguaje de programación.PyCharm es un IDE, es decir, no solo es un editor de código sino que también tiene un depurador, un intérprete y otras herramientas que nos ayudarán a crear y exportar los programas que creemos.<br>
+<br>
+            <n>Ejemplo de programa en Python</n><br>
+<br>
+            El siguiente ejemplo de programa etorna una nueva lista que contiene los elementos de la lista A seguidos de los elementos de la lista B:<br>
+<br>
+            import random<br>
+<br>
+            def concatenarLista(lista_a, lista_b):<br>
+                lista_nueva=[]<br>
+<br>
+                for i in range(0,len(lista_a)):<br>
+                    lista_nueva.append(lista_a[i])<br>
+<br>
+                for i in range(0,len(lista_b)):<br>
+                    lista_nueva.append(lista_b[i])<br>
+<br>
+                return lista_nueva<br>
+<br>
+            def imprimirLista(lista,nombre):<br>
+                for i in range(0,len(lista)):<br>
+                    print nombre + "[" + str(i) + "]=" + str(lista[i])<br>
+<br>
+            def leerLista():<br>
+                lista=[]<br>
+<br>
+                i=0<br>
+                while i < 5:<br>
+                    lista.append(int(random.randint(0, 5)))<br>
+                    i=i+1<br>
+                return lista<br>
+<br>
+            A=leerLista()<br>
+            B=leerLista()<br>
+            C=concatenarLista(A, B)<br>
+            imprimirLista(C,"C")<br>
+<br>
+        </div>
+    </body>
+</html>

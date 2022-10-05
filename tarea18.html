@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>Tarea 18</title>
+        <link href="Utilidad/estilo.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <center>
+        <a href="tarea17.html" class="button">- Anterior -</a>
+        <a href="menu-tareas.html" class="button">- Menu Tareas -</a>
+        <a href="tarea19.html" class="button">- Siguiente -</a>
+        </center>
+        <div>
+            <br>
+            <center><n class="titulo">Serie A</n></center><br>
+            <n>Tarea #18</n><br>
+            <br>
+            <pre>
+            <n>El codigo del programa es el siguiente: </n>
+
+/*
+Marcelo Amado De Leon Gomez 2077432
+Lenguajes de Programacion Hora: V4-V6
+Grupo: 009
+Tarea 18
+*/
+
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+public class Tarea18{
+	public static long exponenciar(long n, long exponente){
+		long r = 1;
+		for(int x = 0 ; x < exponente ; x++){
+			r = r * n;
+		}
+		return r;
+	}
+	public static void main(String[] args){
+		Scanner lec = new Scanner(System.in);
+		long opcion, resultado, exponente;
+		System.out.print("\nIngrese el numero de datos que desee ver de la serie | 1, 8, 243, 16384, 1953125 |: ");
+		opcion = lec.nextInt();
+		for(int n = 1 ; n <= opcion ; n++){
+			exponente = (2 * n) - 1;
+			resultado = exponenciar(n, exponente);
+			System.out.println("\nN: " + n);
+			System.out.println("Resultado: " + resultado);
+		}
+	}
+}
+
+
+            <n>El resultado de la ejecucion de este codigo es el siguiente:</n>
+
+
+            Ingrese el numero de datos que desee ver de la serie | 1, 8, 243, 16384, 1953125 |: 8
+
+            N: 1
+            Resultado: 1
+
+            N: 2
+            Resultado: 8
+
+            N: 3
+            Resultado: 243
+
+            N: 4
+            Resultado: 16384
+
+            N: 5
+            Resultado: 1953125
+
+            N: 6
+            Resultado: 362797056
+
+            N: 7
+            Resultado: 96889010407
+
+            N: 8
+            Resultado: 35184372088832
+            </pre>
+        </div>
+    </body>
+</html>

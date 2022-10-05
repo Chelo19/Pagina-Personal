@@ -1,0 +1,161 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>Tarea 17</title>
+        <link href="Utilidad/estilo.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <center>
+        <a href="tarea16.html" class="button">- Anterior -</a>
+        <a href="menu-tareas.html" class="button">- Menu Tareas -</a>
+        <a href="tarea18.html" class="button">- Siguiente -</a>
+        </center>
+        <div>
+            <br>
+            <center><n class="titulo">Conversión de monedas</n></center><br>
+            <n>Tarea #17</n><br>
+            <br>
+            <pre>
+            <n>El codigo del programa es el siguiente: </n>
+
+/*
+Marcelo Amado De Leon Gomez 2077432
+Lenguajes de Programacion Hora: V4-V6
+Grupo: 009
+Tarea 17
+*/
+
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+public class Tarea17{
+	public static float conversionMxnaUsd(float mxn){
+		float usd;
+		System.out.println("\nHas elegido la conversion de MXN a USD");
+		System.out.println("\n*** El valor de 1 MXN es de 0.05 USD ***");
+		usd = mxn * 0.05f;
+		System.out.println();
+		System.out.println("\nEl valor de " + mxn + " MXN es de " + usd + " USD");
+		return 0;
+	}
+	public static double conversionMxnaEuro(float mxn){
+		float euro;
+		System.out.println("\nHas elegido la conversion de MXN a Euro");
+		System.out.println("\n*** El valor de 1 MXN es de 0.05 Euro ***");
+		euro = mxn * 0.043f;
+		System.out.println();
+		System.out.println("\nEl valor de " + mxn + " MXN es de " + euro + " Euro");
+		return 0;
+	}
+	public static double conversionMxnaYen(float mxn){
+		float yen;
+		System.out.println("\nHas elegido la conversion de MXN a Yen");
+		System.out.println("\n*** El valor de 1 MXN es de 5.52 Yen ***");
+		yen = mxn * 5.52f;
+		System.out.println();
+		System.out.println("\nEl valor de " + mxn + " MXN es de " + yen + " Yen");
+		return 0;
+	}
+	public static double conversionMxnaHk(float mxn){
+		float hk;
+		System.out.println("\nHas elegido la conversion de MXN a HK");
+		System.out.println("\n*** El valor de 1 MXN es de 0.39 HK ***");
+		hk = mxn * 0.39f;
+		System.out.println();
+		System.out.println("\nEl valor de " + mxn + " MXN es de " + hk + " HK");
+		return 0;
+	}
+	public static void main(String[] args){
+		Scanner lec = new Scanner(System.in);
+		int salida = 0;
+		float mxn;
+		do{
+			String[] options = {"Dolar", "Euro", "Yen", "Dolar de Honk Kong"};
+			System.out.println();		//por estetica
+			System.out.print("Ingrese el monto de MXN que desee convertir: ");
+			mxn = lec.nextFloat();
+			System.out.println();		//por estetica
+			int opcion = JOptionPane.showOptionDialog(null, "Que conversion desea aplicar?",
+				"Pulse una opcion",
+				JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, options, options[0]);
+			switch (opcion){
+				case 0:
+					conversionMxnaUsd(mxn);
+				break;
+				case 1:
+					conversionMxnaEuro(mxn);
+				break;
+				case 2:
+					conversionMxnaYen(mxn);
+				break;
+				case 3:
+					conversionMxnaHk(mxn);
+				break;
+			}
+			System.out.print("\n\nDeseas volver a ejecutar el programa? (| 1 = Si || 0 = No |): ");
+			salida = lec.nextInt();
+		}while(salida != 0);
+	}
+}
+
+
+        <n>El resultado de la ejecucion de este codigo es el siguiente:</n>
+
+        <img src="Imagenes del compilador/Tarea 17/1.JPG" alt="">
+        
+
+        <n>En caso de elegir la conversion a USD: </n>
+
+        Ingrese el monto de MXN que desee convertir: 320.50
+
+        Has elegido la conversion de MXN a USD
+
+        *** El valor de 1 MXN es de 0.05 USD ***
+
+
+        El valor de 320.5 MXN es de 16.025 USD
+
+
+
+        <n>En caso de elegir la conversion a Euro: </n>
+
+        Ingrese el monto de MXN que desee convertir: 320.50
+
+
+        Has elegido la conversion de MXN a Euro
+
+        *** El valor de 1 MXN es de 0.05 Euro ***
+
+
+        El valor de 320.5 MXN es de 13.781501 Euro
+
+
+
+        <n>En caso de elegir la conversion a Yen: </n>
+
+        Ingrese el monto de MXN que desee convertir: 320.50
+
+
+        Has elegido la conversion de MXN a Yen
+
+        *** El valor de 1 MXN es de 5.52 Yen ***
+
+
+        El valor de 320.5 MXN es de 1769.16 Yen
+
+
+
+        <n>En caso de elegir la conversion a Dolar de Honk Kong: </n>
+
+        Ingrese el monto de MXN que desee convertir: 320.50
+
+
+        Has elegido la conversion de MXN a HK
+
+        *** El valor de 1 MXN es de 0.39 HK ***
+
+
+        El valor de 320.5 MXN es de 124.994995 HK
+        </pre>
+        </div>
+    </body>
+</html>

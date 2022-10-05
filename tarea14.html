@@ -1,0 +1,144 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>Tarea 14</title>
+        <link href="Utilidad/estilo.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <center>
+        <a href="tarea13.html" class="button">- Anterior -</a>
+        <a href="menu-tareas.html" class="button">- Menu Tareas -</a>
+        <a href="tarea15.html" class="button">- Siguiente -</a>
+        </center>
+        <div>
+            <br>
+            <center><n class="titulo">SQL</n></center><br>
+            <n>Tarea #14</n><br>
+            <br>
+            <pre class="texto">
+<n>Síbolos</n>
+
+Los símbolos se clasifican en ordinarios y delimitadores:
+•	Un símbolo ordinario es una constante numérica, un identificador ordinario, un identificador del lenguaje principal o una palabra clave.
+
+Ejemplos
+   1        .1        +2        SELECT        E        3
+
+•	Un símbolo delimitador es una constante de tipo serie, un identificador delimitado, un símbolo de operador o cualquier carácter especial mostrado en los diagramas de sintaxis. 
+Un signo de interrogación también es un símbolo delimitador cuando actúa como marcador de parámetro.
+Ejemplos
+   ,        'serie'        "fld1"        =        .
+
+Espacios: Un espacio es una secuencia de uno o varios caracteres en blanco. Los símbolos que no son constantes de tipo serie ni identificadores delimitados no deben incluir ningún espacio. 
+Los símbolos pueden ir seguidos de un espacio. Cada símbolo ordinario debe ir seguido por un espacio o por un símbolo delimitador si lo permite la sintaxis.
+
+Comentarios: Los comentarios de SQL son compuestos (empiezan por /* y finalizan por */) o simples (empiezan por dos guiones consecutivos y finalizan con el final de línea). 
+Las sentencias de SQL estático pueden incluir comentarios SQL o del lenguaje principal. Se pueden especificar comentarios dondequiera que se pueda especificar un espacio, excepto 
+dentro de un símbolo delimitador o entre las palabras clave EXEC y SQL.
+
+Sensibilidad a mayúsculas y minúsculas: Los símbolos pueden incluir letras minúsculas, pero las letras minúsculas de un símbolo ordinario se convierten a mayúsculas, excepto en las variables 
+del lenguaje principal en C, que tienen identificadores sensibles a las mayúsculas y minúsculas. Los símbolos delimitadores no se convierten nunca a mayúsculas. Por lo tanto, la sentencia:
+   select * from EMPLOYEE where lastname = 'Smith';
+
+después de la conversión, es equivalente a:
+   SELECT * FROM EMPLOYEE WHERE LASTNAME = 'Smith';
+
+Las letras alfabéticas de múltiples bytes no se convierten a mayúsculas. Los caracteres de un solo byte (de la "a" a la "z") sí se convierten a mayúsculas.
+
+Para caracteres en Unicode:
+•	Un carácter se convierte a mayúsculas, si procede, si el carácter en mayúsculas en UTF-8 tiene la misma longitud que el carácter en minúsculas en UTF-8. Por ejemplo, el carácter 'i' 
+sin punto y en minúsculas del turco no se convierte porque en UTF-8 dicho carácter tiene l valor X'C4B1', mientras que el carácter 'I' sin punto en mayúsculas tiene el valor X'49'.
+•	La conversión se realiza sin tener en cuenta el entorno local. Por ejemplo, el carácter 'i' sin punto en minúsculas se convierte en el carácter 'I? sin punto en mayúsculas del inglés.
+•	Ambas letras alfabéticas de anchura media y anchura completa se convierten en minúsculas. Por ejemplo, la 'a' minúscula de anchura completa (U+FF41) se convierte en la 'A' mayúscula de anchura completa (U+FF21).
+
+Principales Características de SQ
+La solvencia, versatilidad y consistencia de las bases de datos relacionales y de SQL, hacen de este lenguaje uno de los más importantes útiles y demandados para analizar datos.
+Estas son algunas de las principales características de SQL, y por lo que es tan popular y básico dentro del mundo del análisis de datos:
+•	Integridad de los datos.
+•	Lenguaje estandarizado.
+•	Sencillez y claridad.
+•	Flexibilidad.
+
+<n>Sintaxis de SQL</n>
+
+Para explicar la sintaxis de SQL, en primer lugar, es importante decir que una base de datos a menudo contiene muchas tablas, a cada tabla se le asigna un nombre por ejemplo «Datos_Clientes«. 
+Estas tablas tienen filas y columnas y contienen distintos valores.
+Para extraer los datos o consultarlos, transformarlos o convertirlos, mostramos un resumen del curso SQL con los comandos más importantes:
+
+SELECT: La instrucción SELECT se utiliza para seleccionar distintos datos de contiene una base de datos.
+
+SELECT DISTINCT: Para seleccionar los distintos valores de una tabla se añade la instrucción.
+
+WHERE: La instrucción WHERE es utilizada para establecer condiciones y filtros a la query.
+
+AND, OR, NOT: Los operadores AND, OR y NOT se utilizan en la cláusula WHERE, dependiendo del tipo de condición que se quiera establecer.
+
+IN: Este comando permite concretar valores múltiples en dentro de la cláusula WHERE.
+
+BETWEEN: Este comando de SQL selecciona valores dentro de un rango que se especifica en la cláusula WHERE. Los valores pueden ser fechas, números o texto.
+
+LIKE: El comando LIKE es utilizado en la cláusula WHERE para buscar un valor que contenga los caracteres que se especifiquen en una columna concreta.
+
+ORDER BY: Este comando sirve para ordenar los resultados de una consulta en orden ascendente o descendente.
+
+COUNT, AVG, SUM: Estas son las funciones de agregación principales ya que permiten contar, sumar o calcular promedios de una columna concreta.
+
+GROUP BY: Cuando se utilizan funciones de agregación, se utiliza GROUP BY para agrupar el resultado de la query en una o varias columnas.
+
+HAVING: El comando HAVING es utilizado con funciones agregadas en la cláusula WHERE.
+
+CREATE TABLE: Se utiliza para crear una tabla nueva en una base de datos SQL.
+
+DROP TABLE: Esta instrucción de SQL es utilizada para borrar una tabla de la base de datos.
+
+ALTER TABLE: Este comando sirve para modificar, eliminar o añadir columnas en una tabla que ya existe en la base de datos.
+
+UPDATE: Este comando es utilizado para actualizar los valores de una tabla SQL que se quiera modificar.
+
+DELETE: El comando DELETE es utilizado para eliminar valores concretos de una tabla SQL.
+
+INSERT INTO: Este comando SQL sirve para insertar valores en una tabla que ya existe.
+
+<n>Esqueleto en SQL</n>
+
+DECLARE 
+BEGIN 
+END; 
+
+<n>Aplicación a descargar para editar y ejecutar SQL</n>
+
+La aplicación para trabajar con SQL en este caso es el IDE DataGrip desarrollado por JetBrains, cuenta con las siguientes características:
+•	Consola de consulta inteligente
+•	Esquema de navegación eficiente
+•	Explicar plan
+
+<n>Tipo de paradigma de SQL</n>
+
+SQL es un lenguaje de programación que pertenece al tipo de paradigma declarativo.
+
+<n>Ejemplo de programa escrito en SQL</n>
+En este caso tenemos un programa que calcula el área y perímetro de un circulo:
+
+DECLARE 
+  
+    area   NUMBER(6, 2)  ;  
+    perimetro   NUMBER(6, 2)  ; 
+      
+    radio NUMBER(1) := 3; 
+      
+    pi CONSTANT NUMBER(3, 2) := 3.14; 
+      
+BEGIN 
+  
+        area := pi * radius * radius; 
+        perimetro := 2 * pi * radius;
+        dbms_output.Put_line('Area = ' || area); 
+        dbms_output.Put_line(' Perimetro = ' || perimetro); 
+  
+END; 
+
+
+            </pre>
+        </div>
+    </body>
+</html>

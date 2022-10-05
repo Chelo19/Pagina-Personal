@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>Tarea 9</title>
+        <link href="Utilidad/estilo.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <center>
+        <a href="tarea8.html" class="button">- Anterior -</a>
+        <a href="menu-tareas.html" class="button">- Menu Tareas -</a>
+        <a href="tarea10.html" class="button">- Siguiente -</a>
+        </center>
+        <div>
+            <br>
+            <center><n class="titulo">R</n></center><br>
+            <n>Tarea #9</n><br>
+            <br>
+            <pre class="texto">
+<n>Símbolos del lenguaje R</n>
+
+Símbolo         Relación
+<<                  Menor que
+>>                  Mayor que
+≤≤                  Menor o igual que
+≥≥                  Mayor o igual que
+==                  Igual
+!=!=                Diferente
+
+<n>Operadores Lógicos:</n>
+
+Símbolo                  Lógica
+!x!x                         Negación
+x & yx & y               Conjunción (˄)
+x && yx && y          Igual
+x|yx|y                      Disyunción (ν)
+x||yx||y                    Igual
+
+
+<n>La sintaxis en R es muy similar a la de otros lenguajes de programación como JAVA o C. Las normas básicas que definen la sintaxis de R son:</n>
+
+•	No se tienen en cuenta los espacios en blancos: podemos o no dejar espacios para que el código se puede ordenar de forma adecuada y poder entenderse.
+•	Se distinguen las mayúsculas y minúsculas: para variables en el código, podemos crear diferentes variables con nombres iguales pero alternando mayúsculas y minúsculas.
+•	Se pueden incluir comentarios: como vimos anteriormente los comentarios se utilizan para añadir información en el código.
+•	No es necesario terminar cada sentencia con el carácter de punto y coma (;): en la mayoría de lenguajes de programación, es obligatorio terminar cada sentencia con este carácter. En en cambio R podemos o no terminar de esta forma.
+•	Lenguaje orientado a objetos: todo en R son objetos, las variables, datos, funciones y resultados, que se generan en R son objetos estos se modifican o manipulan con operadores o funciones (que a su vez son objetos).
+
+<n>Esqueleto del lenguaje R</n>
+
+install.packages("gmp") 
+require(gmp) 
+main{
+}
+
+<n>Aplicación a descargar para editar y ejecutar el lenguaje de programación R</n>
+
+R Studio proporciona todas las herramientas necesarias para poder programar en el lenguaje R.
+Al instalar R Studio, se puede programar en R desde una consola y trabajar mediante ella. 
+
+<img src="Imagenes del compilador/Tarea 9/1.jpg" alt="">
+
+R  Studio tiene muchas opciones, como crear gráficos. Además de que es gratuito, por lo que es una buena opción para programar en este lenguaje.
+
+<img src="Imagenes del compilador/Tarea 9/2.png" alt="">
+
+<n>¿A qué tipo de paradigma pertenece?</n>
+        
+El lenguaje R es multiparadigma, pues pertenece al tipo funcional, vectorial, imperativo, procedural y orientado a objetos.
+
+<n>Ejemplo de un programa escrito en el lenguaje R</n>
+        
+En este caso, el programa trata de la generación de la serie de Fibonacci en R
+
+install.packages("gmp") 
+require(gmp) 
+    fib <- function(n) { 
+    a = 0 
+    b = 1 
+    for (i in 1:n) { 
+        tmp = b 
+        b = a 
+        a = add.bigz(a, tmp) # gmp function 
+        } 
+    return(a) 
+    } 
+fib(79)
+
+            </pre>
+        </div>
+    </body>
+</html>

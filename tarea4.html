@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>Tarea 4</title>
+        <link href="Utilidad/estilo.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <center>
+        <a href="tarea3.html" class="button">- Anterior -</a>
+        <a href="menu-tareas.html" class="button">- Menu Tareas -</a>
+        <a href="tarea5.html" class="button">- Siguiente -</a>
+        </center>
+        <div>
+            <br>
+            <center><n class="titulo">Compilador e Intérprete</n></center><br>
+            <n>Tarea #4</n><br>
+            <br>
+            <n>Compilador</n><br>
+            <br>
+            Un compilador es un programa informático que traduce todo el código fuente de un proyecto de software a código máquina antes de ejecutarlo. Solo entonces el procesador ejecuta el software, obteniendo todas las instrucciones en código máquina antes de comenzar. De esta manera, el procesador cuenta con todos los componentes necesarios para ejecutar el software, procesar las entradas y generar los resultados. No obstante, en muchos casos, durante el proceso de compilación tiene lugar un paso intermedio fundamental: antes de generar la traducción final en código máquina, la mayoría de los compiladores suelen convertir el código fuente en un código intermedio (también llamado código objeto) que, a menudo, es compatible con diversas plataformas y que, además, también puede ser utilizado por un intérprete.<br>
+            Al producir el código, el compilador determina qué instrucciones van a enviarse al procesador y en qué orden. Si las instrucciones no son interdependientes, incluso es posible que puedan procesarse en paralelo.<br>
+            Entre los lenguajes compilados puros se incluyen, entre otros, los veteranos C, C++ y Pascal.<br>
+<br>
+            <n>Origen</n><br>
+            <br>
+            En el siglo XIX, nada más y nada menos, ya que Ada Byron, alias Lady Lovelace, también conocida como “Ada Lovelace”, fue una matemática y escritora inglesa y está considerada como la primera programadora de la historia<br>
+<br>
+            <n>Tipos de compiladores:</n><br>
+            <br>
+            •	Compilador cruzado<br>
+            Genera un código ejecutable en un ordenador distinto de aquel en que se realiza la compilación.<br>
+<br>
+            •	Compilador de montaje y ejecución<br>
+            Se fragmenta el programa fuente en módulos que se compilan por separado, y una vez compilados se unen mediante un enlazador para formar un módulo ejecutable.<br>
+<br>
+            •	Compilador en una pasada<br>
+            Examina el código fuente una sola vez, generando el código objeto.<br>
+<br>
+            •	Compilador de pasadas múltiples <br>
+            Requiere varias lecturas del programa fuente para producir y optimizar el código objeto.<br>
+<br>
+            •	Compilador de optimización<br>
+            Lee el código fuente, lo analiza, optimiza y descubre errores potenciales sin ejecutar el programa.<br>
+<br>
+            •	Compilador incremental<br>
+            Compila el programa fuente, en caso de detectar errores al volver a compilar el programa corregido, solo compila las modificaciones que se han hecho respecto al primero.<br>
+<br>
+            •	Ensamblador<br>
+            El lenguaje fuente es el lenguaje ensamblador.<br>
+<br>
+            •	Autocompilador<br>
+            Es el compilador que está escrito en el mismo lenguaje a compilar, básicamente nos sirve para hacer ampliaciones al lenguaje, mejorar el código generado, etc.<br>
+<br>
+            •	Metacompilador<br>
+            “Compilador de compiladores”. Obtiene como entrada la definición de un lenguaje y como salida el compilador para dicho lenguaje.<br>
+            <br>
+            <n>Intérprete</n><br>
+            <br>
+            Un intérprete es un programa informático que procesa el código fuente de un proyecto de software durante su tiempo de ejecución, es decir, mientras el software se está ejecutando, y actúa como una interfaz entre ese proyecto y el procesador. Un intérprete siempre procesa el código línea por línea, de modo que lee, analiza y prepara cada secuencia de forma consecutiva para el procesador. Este principio también se aplica a las secuencias recurrentes, que se ejecutan de nuevo cada vez que vuelven a aparecer en el código. Para procesar el código fuente del software, el intérprete recurre a sus propias bibliotecas internas: en cuanto una línea de código fuente se ha traducido a los correspondientes comandos legibles por máquina, esta se envía directamente al procesador.<br>
+            El proceso de conversión no finaliza hasta que se ha interpretado todo el código. Solo se interrumpe prematuramente si se produce un fallo durante el procesamiento, lo que simplifica mucho la resolución de los errores, ya que la línea de código problemática se detecta inmediatamente después de ocurrir el fallo.<br>
+            BASIC, Perl, Python, Ruby y PHP son algunos de los lenguajes de programación más famosos que dependen de un intérprete para ser traducidos de código fuente a código máquina. Por ello, también suelen llamarse lenguajes interpretados.<br>
+<br>
+            <n>Tipos de intérpretes:</n><br>
+            <br>
+            •	Intérpretes puros<br>
+            Analizan y ejecutan sentencia a sentencia todo el programa fuente. Siguen el modelo de interpretación iterativa y, por tanto, se utilizan principalmente para lenguajes sencillos.<br>
+<br>
+            •	Intérpretes avanzados<br>
+            Incorporan un paso previo de análisis de todo el programa fuente. Generando posteriormente un lenguaje intermedio que es ejecutado por ellos mismos. De esta forma en caso de errores sintácticos no pasan de la fase de análisis.<br>
+<br>
+            •	Intérpretes incrementales<br>
+            Existen ciertos lenguajes que, por sus características, no se pueden compilar directamente. La razón es que pueden manejar objetos o funciones que no son conocidos en tiempo de compilación, ya que se crean dinámicamente en tiempo en ejecución. Entre estos lenguajes, pueden considerarse Smalltalk, Lisp o Prolog. Con el propósito de obtener una mayor eficiencia que en la interpretación simple, se diseñan compiladores incrementales.<br>
+<br>
+            •	Evaluadores Parciales<br>
+            La utilización de evaluadores parciales o especializadores surge al considerar que muchos programas contienen dos tipos de datos de entrada. Existen una serie de datos de entrada que son diferentes en cada ejecución mientras que otros datos no varían de una ejecución a otra.<br>
+<br>
+            •	Compiladores “Just in Time”<br>
+            Para evitar la interpretación, muchos sistemas transforman los códigos de bytes en código nativo siguiendo el modelo “just in time”. En este modelo, una unidad de compilación o clase se transmite en el formato de códigos de bytes, pero no se realiza la interpretación.<br>
+<br>
+            •	Compilación Continua<br>
+            Surge como un intento de mejorar la compilación “Just in Time”. El sistema mezcla el proceso de compilación a código nativo con el proceso de interpretación. Para conseguirlo, el sistema dispone de dos módulos: un módulo de intérpretación de los códigos de bytes y otro módulo de compilación de códigos de bytes a código nativo.<br>
+<br>
+        </div>
+        <div class="bibliografia">
+            <n>Bibliografía:</n>
+            <br>
+            <br>
+            Desarrollo Web. (2020). Compilador e intérprete: definición y diferencias. 2021, de IONOS Sitio web: https://www.ionos.mx/digitalguide/paginas-web/desarrollo-web/compilador-e-interprete/
+            <br>
+            <br>
+            Elisa González. (2021). Programa o Compilador. 2021, de TRIBALYTE Sitio web: https://tech.tribalyte.eu/blog-programa-o-compilador
+            <br>
+            <br>
+            Jose Emilio Labra Gayo & Juan Manuel Cueva Lovelle . (2003). Intérpretes Y Diseño de Lenguajes De Programación. 2021, de Universidad de Oviedo Sitio web: http://di002.edv.uniovi.es/~cueva/publicaciones/monografias/35_InterpretesDLP.pdf
+            <br>
+            <br>
+            M. en C. Pérez Pérez Isaias & L.S.C. Monroy Cedillo Jair Jonathan. (2017). Tipos de Compiladores. 2021, de UAEH Sitio web: http://cidecame.uaeh.edu.mx/lcc/mapa/PROYECTO/libro32/15_tipos_de_compiladores.html
+            <br>
+        </div>
+    </body>
+</html>

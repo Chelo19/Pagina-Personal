@@ -1,0 +1,149 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>Tarea 11</title>
+        <link href="Utilidad/estilo.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <center>
+        <a href="tarea10.html" class="button">- Anterior -</a>
+        <a href="menu-tareas.html" class="button">- Menu Tareas -</a>
+        <a href="tarea12.html" class="button">- Siguiente -</a>
+        </center>
+        <div>
+            <br>
+            <center><n class="titulo">Cobol</n></center><br>
+            <n>Tarea #11</n><br>
+            <br>
+            <pre class="texto">
+
+<n>Cobol comprende cinco grandes grupos o elementos que son:</n>
+•	Los caracteres
+•	Las constantes
+•	Nombres creados por el propio programador
+•	Los símbolos
+•	Las palabras reservadas
+
+<n>Los símbolos</n>
+Un símbolo es un carácter especial, existen tres tipos bàsicos de sìmbolos:
+•	de puntuación.
+•	aritméticos.
+•	condicionales.
+
+<n>De puntuación </n>
+Los de puntuación son todos aquellos que comprenden:
+•	. El punto
+•	, La coma
+•	; El punto y coma
+•	' " Comillas simples y comillas dobles
+•	() Los parentesis
+
+<n>Aritméticos </n>
+Los aritméticos son todos aquellos que comprenden:
+•	+ Para sumas
+•	- Para restas
+•	* Para multiplicaciones
+•	/ Para divisiones
+•	** Para potencias
+•	= Para asignar (variables)
+•	( ) Para el orden de ejecuciòn de operaciones aritmèticas
+
+<n>Condicionales </n>
+Los condicionales son todos aquellos que comprenden:
+•	= para analizar si son iguales
+•	< Si es menor
+•	> Si es mayor
+•	<= Si es menor o igual
+•	>= Si es mayor o igual
+•	( ) para controlar el orden de control en operaciones lògicas
+
+<n>Las constantes</n>
+Una constante es un valor que se asigna a una letra o grupo de letras, siendo dicho valor 
+duradero e invariable durante la ejecución del programa.
+Las constantes pueden ser:
+•	Numéricas
+•	Enteras
+•	De punto fijo
+•	De punto flotante
+•	Alfanuméricas
+•	El valor asignado va entre comillas dobles
+•	Figurativas
+•	Son aquellas palabras que representan algún valor ya definido: SPACE para indicar espacios.
+
+<n>Las palabras reservadas</n>
+Una palabra reservada es una palabra que utiliza el propio sistema operativo, 
+o sea que es lo que se llama una sentencia propia.
+Supongamos DIVISION , division es una palabra que ya esta creada en el propio 
+lenguaje cobol osea que nosotros no podemos crear una variable o constante que 
+se llame division pues nos darìa un error, en su caso podemos crear DIVISIONA u 
+otra que nos sirva pero que no sea exactamente a ninguna palabra del propio 
+lenguaje cobol osea que no sea igual a una palabra reservada.
+Las variables
+Una variable es una zona de memoria donde permite se almacenen datos y puedan 
+ser manipulados con la ùnica limitaciòn de hacer referencia a dicha zona de 
+memoria mediante un grupo de palabras.
+Las constantes
+Una constante es igual a una variable, osea, que tiene una zona de la memoria 
+donde se guarda su valor, pero a diferencia de las variables, el valor que se 
+les da al principio del programa ya no se puede alterar.
+
+<n>Esqueleto de Cobol</n>
+
+ENVIRONMENT                     DIVISION.
+DATA                                    DIVISION.
+WORKING-STORAGE              SECTION.
+
+<n>Aplicación a descargar para editar y ejecutar Cobol</n>
+
+OpenCOBOL
+OpenCOBOL también es un compilador de código abierto. También te lo puedes 
+encontrar con el nombre de GnuCOBOL:
+Este compilador funciona con los estándares COBOL 85 y COBOL 2002, e implementa 
+muchas extensiones de compiladores COBOL que ya existen en el mercado.
+OpenCOBOL funciona de la siguiente manera: traduce el código COBOL que escribes 
+al lenguaje C, y luego compila el código traducido con un compilador nativo.
+
+<img src="Imagenes del compilador/Tarea 11/1.jpg" width="800px" height="400px" alt="">
+
+<n>¿A qué tipo de paradigma pertenece?</n>
+        
+El lenguaje de programación Cobol pertenece al paradigma imperativo.
+
+<n>Ejemplo de un programa escrito en Cobol</n>
+        
+En este caso un programa para obtener el número de serie del Disco Duro (HDD)
+1.	 ENVIRONMENT     DIVISION.
+2.	 DATA            DIVISION.
+3.	 WORKING-STORAGE SECTION.
+4.	 01 WE-PARAM IS GLOBAL IS EXTERNAL.
+5.	    02  WE-PARAM-cad1  PIC  x(256).
+6.	    02  WE-PARAM-cad2  PIC  x(256).
+7.	    02  WE-PARAM-NumS  PIC s9(009) comp-5.
+8.	    02  WE-PARAM-long  PIC s9(009) comp-5.
+9.	    02  WE-PARAM-flag  PIC s9(009) comp-5.
+10.	    02  WE-PARAM-path  PIC  x(003).
+11.	    02  WE-PARAM-retc  PIC s9(009) comp-5.
+12.	 PROCEDURE       DIVISION.
+13.	 
+14.	     call "GetVolumeInformationA" with stdcall linkage
+15.	           using by reference WE-PARAM-path
+16.	                 by reference WE-PARAM-cad1 
+17.	                 by value     256
+18.	                 by reference WE-PARAM-NumS
+19.	                 by value     WE-PARAM-long
+20.	                 by value     WE-PARAM-flag
+21.	                 by reference WE-PARAM-cad2
+22.	                 by value     256
+23.	           returning WE-PARAM-retc
+24.	     end-call
+25.	*
+26.	     INVOKE pow-self "CloseForm" USING "F-NRODSK"
+27.	 
+28.	 
+29.	 *>    02  WE-PARAM-NumS  PIC s9(009) comp-5.   <----- Aqui vuelve el numero de serie del rigido 
+30.	 *>    02  WE-PARAM-path  PIC  x(003).          <----- Disco a buscar Ej.:   C:\
+
+            </pre>
+        </div>
+    </body>
+</html>

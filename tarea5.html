@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>Tarea 5</title>
+        <link href="Utilidad/estilo.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <center>
+        <a href="tarea4.html" class="button">- Anterior -</a>
+        <a href="menu-tareas.html" class="button">- Menu Tareas -</a>
+        <a href="tarea6.html" class="button">- Siguiente -</a>
+        </center>
+        <div>
+            <br>
+            <center><n class="titulo">Prolog</n></center><br>
+            <n>Tarea #5</n><br>
+            <br>
+            <n>Operadores</n><br>
+            <br>
+            Los operadores de Prolog están divididos en dos clases: aritméticos y relacionales.<br>
+            Los operadores aritméticos incluyen los símbolos para suma, resta, multiplicación y división . En Prolog, si dos enteros son sumados, restados o multiplicados, el resultado será un entero. Siempre que uno de los operandos, en cualquiera de estas operaciones sea un número real, el resultado siempre será un real. El resultado de una división, siempre que los operandos sean enteros o reales, será siempre real.<br>
+<br>
+            <n>Aritméticos</n><br>
+            <br>
+            Todas las versiones de Prolog soportan los siguientes operadores aritméticos, listados en el orden de prioridad de ejecución.<br>
+            + --> SUMA<br>
+            - --> RESTA<br>
+            * --> MULTIPLICACIÓN<br>
+            / --> DIVISIÓN<br>
+            // --> DIVISION ENTERA<br>
+            MOD --> RESIDUO<br>
+            ^ --> POTENCIA<br>
+            Los paréntesis se pueden utilizar para dar preferencia de ejecución en una expresión compuesta. Prolog utiliza la precedencia de operadores con la regla de la mano izquierda.<br>
+<br>
+            A continuación se muestran algunas operaciones más complejas que PROLOG provee:<br>
+<br>
+            <n>Operacion	Descripcion</n><br>
+            <br>
+            Sqrt(X)-------------Calcula la raíz cuadrada de la variable<br>
+            log(X)--------------Calcula el logaritmo de X<br>
+            ln(X)---------------Calcula el logaritmo natural de X<br>
+            abs(B)--------------Regresa el valor absoluto de B<br>
+            sin(T)--------------Seno de T<br>
+            cos(A)--------------Coseno de A<br>
+            tan(C)--------------Tangente de C<br>
+            <br>
+            <n>Relacionales</n><br>
+            <br>
+            Prolog soporta los siguientes operadores relacionales:<br>
+            = --> IGUAL QUE<br>
+            > --> MAYOR QUE<br>
+            >= --> MAYOR O IGUAL QUE<br>
+            >= --> MENOR O IGUAL QUE<br>
+            "<">" --> DESIGUAL QUE<br>
+            =/= --> DIFERENTE QUE<br>
+            is --> EVALUADOR DE EXPRESIÓN<br>
+            seed --> GENERADOR DE NÚMEROS ALEATORIOS<br>
+            Cuando dos objetos que son símbolos o cadenas de caracteres son comparados, los caracteres son convertidos a su equivalente ASCII. El valor de cada carácter es examinado a partir del operador relacional, de izquierda a derecha.<br>
+<br>
+            <n>Comentarios</n><br>
+            <br>
+            Cuando se quiere hacer un comentario que cuenta con más de una línea, se hace de la siguiente manera:<br>
+            /* Comentario x Comentario y */<br>
+<br>
+            Si el comentario es de una solo línea simplemente se antecede el signo de % al comentario. Es importante saber que los comentarios no tienen efecto en la ejecución del programa.<br>
+            % Comentario<br>
+<br>
+            <n>PROLOG paradigma</n><br>
+            <br>
+            PROLOG es un lenguaje de programación que pertenece al paradigma declarativo.<br>
+<br>
+            <n>IDE para editar y ejecutar PROLOG</n><br>
+            <br>
+            SWI-Prolog<br>
+            <br>
+            <img src="Imagenes del compilador/Tarea 10/1.png" alt="">
+            <br>
+            <br>
+            SWI-Prolog es una implementación en código abierto (en inglés, open source) del lenguaje de programación Prolog. Su autor principal es Jan Wielemaker. En desarrollo ininterrumpido desde 1987, SWI-Prolog posee un rico conjunto de características, bibliotecas (incluyendo su propia biblioteca para GUI, XPCE), herramientas (incluyendo un IDE) y una documentación extensiva. SWI-Prolog funciona en las plataformas Unix, Windows y Macintosh.<br>
+            El nombre SWI deriva de Sociaal-Wetenschappelijke Informatica ("Informática de Ciencias Sociales"), el antiguo nombre de un grupo de investigación en la Universidad de Ámsterdam en el que Wielemaker está integrado. El nombre de ese grupo se cambió posteriormente a HCS (Human-Computer Studies).<br>
+<br>
+            <n>Ejemplo de programa en PROLOG</n><br>
+            <br>
+            Este programa calcula los N primeros términos de la serie de Fibonacci:<br>
+            my_fibonacci(_, _, 0).<br>
+<br>
+            my_fibonacci(A, B, N):-<br>
+                    write(A),<br>
+                    write(' '),<br>
+                    N1 is N-1,<br>
+                    C is A+B,<br>
+                    my_fibonacci(B, C, N1).<br>
+<br>
+            Para ejecutar el programa:<br>
+<br>
+            ?- my_fibonacci(0, 1, 10).<br>
+            Y el resultado es:<br>
+<br>
+            0 1 1 2 3 5 8 13 21 34 yes<br>
+<br>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,165 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>Tarea 22</title>
+        <link href="Utilidad/estilo.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <center>
+        <a href="tarea21.html" class="button">- Anterior -</a>
+        <a href="menu-tareas.html" class="button">- Menu Tareas -</a>
+        </center>
+        <div>
+            <br>
+            <center><n class="titulo">Multiplicación de matrices</n></center><br>
+            <n>Tarea #22</n><br>
+            <br>
+            <pre>
+            <n>El codigo del programa es el siguiente: </n>
+
+/*
+Marcelo Amado De Leon Gomez 2077432
+Lenguajes de Programacion Hora: V4-V6
+Grupo: 009
+Tarea 22
+*/
+
+import java.util.Scanner;
+public class Tarea22{
+	public static int x1;
+	public static int y1;
+	public static int x2;
+	public static int y2;
+	public static void xydematrices(){
+		Scanner lec = new Scanner(System.in);
+		System.out.println("\nPor favor ingrese '[x][y]' de la primera matriz\n");
+		System.out.print("Ingresa x: ");
+		x1 = lec.nextInt();
+		System.out.print("Ingresa y: ");
+		y1 = lec.nextInt();
+		System.out.println("\nPor favor ingrese '[x][y]' de la segunda matriz\n");
+		System.out.print("Ingresa x: ");
+		x2 = lec.nextInt();
+		System.out.print("Ingresa y: ");
+		y2 = lec.nextInt();
+		if(x1 < 0 || x1 > 2 || y1 < 0 || y1 >1 || x2 < 0 || x2 > 2 || y2 < 0 || y2 >1){
+			System.out.println("\nIngresa numeros validos\n");
+			xydematrices();
+		}
+	}
+	public static void main(String[] args){
+		Scanner lec = new Scanner(System.in);
+		int[][] array1 = new int[3][2];		//se hace la primera matriz
+		System.out.println("\nPor favor ingrese los numeros para llenar el primer vector");
+		System.out.println();		//por estetica
+		for(int i = 0 ; i < 3 ; i++){		//crear la matriz
+			for(int j = 0 ; j < 2 ; j++){
+				System.out.print("Ingresa el numero entero en [" + i + "][" + j + "]: ");
+				array1[i][j] = lec.nextInt();
+			}
+		}
+		int[][] array2 = new int[3][2];		//se hace la segunda matriz
+		System.out.println("\nPor favor ingrese los numeros para llenar el segundo vector");
+		System.out.println();		//por estetica
+		for(int i = 0 ; i < 3 ; i++){		//crear la matriz
+			for(int j = 0 ; j < 2 ; j++){
+				System.out.print("Ingresa el numero entero en [" + i + "][" + j + "]: ");
+				array2[i][j] = lec.nextInt();
+			}
+		}
+		xydematrices();
+		//se inicia la multiplicacion
+		int multiplicacion = array1[x1][y1] * array2[x2][y2];
+		System.out.println("\nEl resultado de la multiplicacion es: " + multiplicacion);
+		System.out.println();		//por estetica
+		System.out.println("A continuacion se imprimiran las dos matrices");
+		System.out.println();		//por estetica
+		System.out.println("La primera: \n");
+		for(int i = 0 ; i < 3 ; i++){		//imprimir la matriz
+			for(int j = 0 ; j < 2 ; j++){
+				System.out.println("El valor de [" + i + "][" + j + "] es: " + array1[i][j]);
+			}
+		}
+		System.out.println("\nLa segunda: \n");
+		for(int i = 0 ; i < 3 ; i++){		//imprimir la matriz
+			for(int j = 0 ; j < 2 ; j++){
+				System.out.println("El valor de [" + i + "][" + j + "] es: " + array2[i][j]);
+			}
+		}
+	}
+}
+
+
+            <n>El resultado de la ejecucion de este codigo es el siguiente:</n>
+
+
+            Por favor ingrese los numeros para llenar el vector
+
+            Ingresa el numero entero en [0][0]: 4
+            Ingresa el numero entero en [0][1]: 3
+            Ingresa el numero entero en [1][0]: 5
+            Ingresa el numero entero en [1][1]: 6
+            Ingresa el numero entero en [2][0]: 7
+            Ingresa el numero entero en [2][1]: 4
+
+            Por favor ingrese los numeros para llenar el vector
+
+            Ingresa el numero entero en [0][0]:
+            Exception in thread "main" ^C
+            C:\Users\marce_eh8s\Documents\Tareas FIME\Lenguajes de Programación\Tareas 16 en adelante>javac Tarea22.java
+
+            C:\Users\marce_eh8s\Documents\Tareas FIME\Lenguajes de Programación\Tareas 16 en adelante>java Tarea22
+
+            Por favor ingrese los numeros para llenar el primer vector
+
+            Ingresa el numero entero en [0][0]: 3
+            Ingresa el numero entero en [0][1]: 4
+            Ingresa el numero entero en [1][0]: 5
+            Ingresa el numero entero en [1][1]: 4
+            Ingresa el numero entero en [2][0]: 3
+            Ingresa el numero entero en [2][1]: 3
+
+            Por favor ingrese los numeros para llenar el segundo vector
+
+            Ingresa el numero entero en [0][0]: 8
+            Ingresa el numero entero en [0][1]: 7
+            Ingresa el numero entero en [1][0]: 3
+            Ingresa el numero entero en [1][1]: 9
+            Ingresa el numero entero en [2][0]: 9
+            Ingresa el numero entero en [2][1]: 3
+
+            Por favor ingrese '[x][y]' de la primera matriz
+
+            Ingresa x: 1
+            Ingresa y: 1
+
+            Por favor ingrese '[x][y]' de la segunda matriz
+
+            Ingresa x: 2
+            Ingresa y: 0
+
+            El resultado de la multiplicacion es: 36
+
+            A continuacion se imprimiran las dos matrices
+
+            La primera:
+
+            El valor de [0][0] es: 3
+            El valor de [0][1] es: 4
+            El valor de [1][0] es: 5
+            El valor de [1][1] es: 4
+            El valor de [2][0] es: 3
+            El valor de [2][1] es: 3
+
+            La segunda:
+
+            El valor de [0][0] es: 8
+            El valor de [0][1] es: 7
+            El valor de [1][0] es: 3
+            El valor de [1][1] es: 9
+            El valor de [2][0] es: 9
+            El valor de [2][1] es: 3
+            </pre>
+        </div>
+    </body>
+</html>

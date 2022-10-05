@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>Tarea 19</title>
+        <link href="Utilidad/estilo.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <center>
+        <a href="tarea18.html" class="button">- Anterior -</a>
+        <a href="menu-tareas.html" class="button">- Menu Tareas -</a>
+        <a href="tarea20.html" class="button">- Siguiente -</a>
+        </center>
+        <div>
+            <br>
+            <center><n class="titulo">Búsqueda en Vector</n></center><br>
+            <n>Tarea #19</n><br>
+            <br>
+            <pre>
+            <n>El codigo del programa es el siguiente: </n>
+
+/*
+Marcelo Amado De Leon Gomez 2077432
+Lenguajes de Programacion Hora: V4-V6
+Grupo: 009
+Tarea 19
+*/
+
+import java.util.Scanner;
+public class Tarea19{
+	public static int[] array = new int[10];
+	public static int repeticiones = 0;
+	public static void crearArrayInt(){
+		Scanner lec = new Scanner(System.in);
+		System.out.println("\nPor favor ingrese 10 numeros para llenar el vector");
+		System.out.println();		//por estetica
+		for(int x = 0 ; x < array.length ; x++){
+			System.out.print("Ingresa el numero entero " + (x + 1) + ": ");
+			array[x] = lec.nextInt();
+		}
+	}
+	public static void mostrarArray(){
+		System.out.println();		//por estetica
+		for(int x = 0 ; x < array.length ; x++){
+			System.out.println("El numero entero " + (x + 1) + " es: " + array[x]);
+		}
+	}
+	public static void buscarEnArray(){
+		Scanner lec = new Scanner(System.in);
+		System.out.print("\nIngrese el numero que desea saber cuantas repeticiones tiene dentro del vector: ");
+		int valorABuscar = lec.nextInt();
+		for(int x = 0 ; x < array.length ; x++){
+			if(array[x] == valorABuscar){
+				repeticiones++;
+			}
+		}
+		System.out.println("\nEl numero " + valorABuscar + " se ha repetido: " + repeticiones + " veces!");
+	}
+	public static void main(String[] args){
+		Scanner lec = new Scanner(System.in);
+		crearArrayInt();
+		buscarEnArray();
+		System.out.print("\nDesea mostrar el vector? (| Si = 1 || No = 0 |): ");
+		int mostrar = lec.nextInt();
+		if(mostrar == 1){
+			mostrarArray();
+		}
+		else{
+			System.out.println("\nGracias por usar el programa!");
+		}
+	}
+}
+
+
+            <n>El resultado de la ejecucion de este codigo es el siguiente:</n>
+
+
+            Por favor ingrese 10 numeros para llenar el vector
+
+            Ingresa el numero entero 1: 4
+            Ingresa el numero entero 2: 6
+            Ingresa el numero entero 3: 8
+            Ingresa el numero entero 4: 9
+            Ingresa el numero entero 5: 4
+            Ingresa el numero entero 6: 2
+            Ingresa el numero entero 7: 3
+            Ingresa el numero entero 8: 1
+            Ingresa el numero entero 9: 7
+            Ingresa el numero entero 10: 6
+
+            Ingrese el numero que desea saber cuantas repeticiones tiene dentro del vector: 6
+
+            El numero 6 se ha repetido: 2 veces!
+
+            Desea mostrar el vector? (| Si = 1 || No = 0 |): 1
+
+            El numero entero 1 es: 4
+            El numero entero 2 es: 6
+            El numero entero 3 es: 8
+            El numero entero 4 es: 9
+            El numero entero 5 es: 4
+            El numero entero 6 es: 2
+            El numero entero 7 es: 3
+            El numero entero 8 es: 1
+            El numero entero 9 es: 7
+            El numero entero 10 es: 6
+            </pre>
+        </div>
+    </body>
+</html>

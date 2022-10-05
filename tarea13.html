@@ -1,0 +1,150 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>Tarea 13</title>
+        <link href="Utilidad/estilo.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <center>
+        <a href="tarea12.html" class="button">- Anterior -</a>
+        <a href="menu-tareas.html" class="button">- Menu Tareas -</a>
+        <a href="tarea14.html" class="button">- Siguiente -</a>
+        </center>
+        <div>
+            <br>
+            <center><n class="titulo">PHP</n></center><br>
+            <n>Tarea #13</n><br>
+            <br>
+            <pre class="texto">
+<n>Asociatividad	      Operadores</n>
+No asociativo        clone, new
+Izquierda                [
+Derecha                 **
+Derecha                 ++, --, ~, (int), (float), (string), (array), (object), (bool), @
+No asociativo         instanceof
+Derecha                 !
+Izquierda               *, /, %
+Izquierda               +, -, .
+Izquierda               <<, >>
+No asociativo         <, <=, >, >=
+No asociativo         ==, !=, ===, !==, <>
+Izquierda               &
+Izquierda               ^
+Izquierda               &&	
+Izquierda               ?:	
+Derecha                 =, +=, -=, *=, **=, /=, .=, %=, &=, /=, ^=, <<=, >>=, =>	
+Izquierda               and	
+Izquierda               xor	
+Izquierda               or	
+Izquierda               ,	
+
+<n>Operadores artiméticos           Representación</n>
+Suma                                           $x + $y
+Resta                                           $x - $y
+Multiplicación                               $x * $y
+División*                                      $x / $y
+Módulo**                                      $x % $y
+Exponenciación                           $x ** $y
+Negación                                     -$x
+
+<n>Operadores bit a bit	Nombre</n>
+$x & $y                            And
+$x	$y                            (or)	Or
+$x ^ $y                             Xor	
+~$x                                  Not	
+$x << $y                          Shift left (desplazamiento izquierda)	
+$x >> $y                          Shift right (desplazamiento derecha)	
+
+<n>De comparación           Nombre                           Resultado</n>
+$x == $y                         Igual                                 true sean del mismo tipo o no
+$x === $y                       Idéntico                            true sólo si son del mismo tipo
+$x != $y                          Distinto                             true si son diferentes sean del mismo tipo o no
+$x <> $y                         Distinto                             true si son diferentes sean del mismo tipo o no
+$x !== $y                        No idéntido                       true sólo si no son iguales y tampoco del mismo tipo
+$x < $y                           Menor que                         true si $x es menor que y
+$x > $y                           Mayor que                         true si $x es mayor que $y
+$x <= $y                         Menor o igual que             true si $x es menor o igual que $y
+$x >= $a                         Mayor o igual que             true si $x es mayor o igual que $y
+
+
+<n>Sintaxis</n>
+
+<n>Etiquetas</n>
+
+Las etiquetas de apertura   <?php**   y de cierre   ?>
+
+<n>Escape de HTML</n>
+
+Cualquier código fuera de las etiquetas de apertura y cierre es ignorado.
+
+<n>Comentarios</n>
+
+Los comentarios se aplican como en otros lenguajes como C, C++ o Perl, ejemplo:
+/* Esto es
+un comentario
+en varias líneas */
+
+
+
+
+<n>Esqueleto de PHP</n>
+
+< !DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" >
+< html >
+    < head >
+        < title >Página con PHP< /title > 
+    < /head >
+    < body >
+        < p >Este texto no esta escrito en PHP< /p >
+        < ?php  
+            echo "< p >Este texto está escrito con PHP< /p >";
+        ? >
+    < /body >
+< /html >
+
+<n>Aplicación a descargar para editar y ejecutar PHP</n>
+    
+<n>Visual Studio Code</n>
+
+Visual Studio Code es un IDE que soporta diversos lenguajes, entre ellos, PHP
+Características:
+•	resaltado de sintaxis, autocompletado y navegación de código
+•	la finalización del código inteligente con IntelliSense
+•	selector de temas de color
+•	integración de Git y GitHub incorporada
+•	soporte de Emmet incorporado
+•	extensibilidad (puede crear tu propia extensión)
+•	pelusa, depuración, refactorización
+•	terminal integrado
+•	compartir en vivo para la programación en pareja
+
+<n>Tipo de paradigma de PHP</n>
+
+PHP es un lenguaje de programación de tipo de paradigma orientado a objetos
+
+<n>Ejemplo de programa en PHP</n>
+
+En este caso es un programa que sirve para calcular el área de un triángulo
+
+< html >
+    < head >
+        < title >
+            Área del triangulo
+        < /title >
+    < /head >
+    < body bgcolor="pink" text="000033" >
+        < h2 >Resultado: Área del triangulo< /h2 >
+        < p >
+        < ?php
+            extract($_REQUEST, EXTR_SKIP); 
+            $result = ($base * $altura) /2;
+            print "$result = ($base * $altura )/2 < br >";
+        ? >
+    < /body >
+< /html > 
+
+            </pre>
+        </div>
+    </body>
+</html>

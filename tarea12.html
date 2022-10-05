@@ -1,0 +1,125 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>Tarea 12</title>
+        <link href="Utilidad/estilo.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <center>
+        <a href="tarea11.html" class="button">- Anterior -</a>
+        <a href="menu-tareas.html" class="button">- Menu Tareas -</a>
+        <a href="tarea13.html" class="button">- Siguiente -</a>
+        </center>
+        <div>
+            <br>
+            <center><n class="titulo">Ada</n></center><br>
+            <n>Tarea #12</n><br>
+            <br>
+            <pre class="texto">
+<n>Símbolos</n>
+
+Es indiferente el uso de mayúsculas y minúsculas en los identificadores y palabras claves, 
+es decir es un lenguaje case-insensitive. En Ada, todo el programa es un único procedimiento, 
+que puede contener subprogramas (procedimientos o funciones).
+Cada sentencia se cierra con end qué_cerramos. Es un modo de evitar errores y facilitar 
+la lectura. No es necesario hacerlo en el caso de subprogramas, aunque todos los manuales lo 
+aconsejan y casi todos los programadores de Ada lo hacen. El operador de asignación es :=, el 
+de igualdad =. A los programadores de C y similares les puede confundir este rasgo inspirado 
+en Pascal. La sintaxis de atributos predefinidos es Objeto'Atributo (o Tipo'Atributo) 
+(nota: esto sólo aplica a atributos predefinidos por el lenguaje, ya que no es el 
+concepto de atributo típico de OOP).
+
+<n>Sintaxis</n>
+
+Para declarar un arreglo
+array (Tipo_Índice) of Tipo_Elemento
+Si quisiéramos contar las ocurrencias de cada letra en un texto nos definiríamos un array de este tipo:
+type Contador_Caracteres is array (Character) of Natural;
+Con subrango conocido
+subtype Subtipo_Índice is Tipo_Índice range Primero .. Último;
+
+array (Subtipo_Índice) of Tipo_Elemento;
+
+<n>Esqueleto de los programas</n>
+
+generic
+package Programa is
+        type ProgramaEjemplo is limited private;
+private
+        task type ProgramaEjemplo is
+        end ProgramaEjemplo;
+end Programa;
+
+<n>Aplicación a descargar para editar y ejecutar</n>
+
+Un compilador de Ada muy usado es GNAT, originalmente desarrollado por la Universidad de 
+Nueva York bajo patrocinio del DoD. Está basado en la tecnología de GCC y es software libre. 
+Actualmente está mantenido por AdaCore (antes llamada Ada Core Technologies), empresa que 
+ofrece soporte y servicios sobre el compilador.Existen otros compiladores comerciales.
+
+<n>Paradigma al que pertenece Ada</n>
+
+Ada es un lenguaje de programación que pertenece al paradigma de tipo imperativo.
+
+<n>Ejemplo de un programa escrito en Ada</n>
+
+En este caso se presenta un programa que tiene el propósito de imitar un semáforo.
+
+generic
+  ValorInicial: Natural := 1;  -- Parám. genérico con valor por defecto.
+ package Semaforos is
+  type TSemaforo is limited private;
+  procedure Wait (Sem: in out TSemaforo);
+  procedure Signal (Sem: in out TSemaforo);
+private
+  task type TSemaforo is
+    entry Wait;
+    entry Signal;
+  end TSemaforo;
+end Semaforos;
+
+package body Semaforos is
+  procedure Wait (Sem: in out TSemaforo) is
+    begin
+      Sem.Wait;  -- Llamada a punto de entrada de la tarea.
+     end Wait;
+  procedure Signal (Sem: in out TSemaforo) is
+    begin
+      Sem.Signal;  -- Llamada a punto de entrada de la tarea.
+     end Signal;
+  task body TSemaforo is
+    S: Natural := ValorInicial;  -- Es el contador del semáforo.
+   begin
+    loop
+      select
+        when S > 0 =>
+          accept Wait;
+          S := S - 1;
+      or
+        accept Signal;
+        S := S + 1;
+      or
+        terminate;
+      end select;
+    end loop;
+  end TSemaforo;
+end Semaforos;
+with Semaforos;
+
+procedure Prueba_Semaforos is
+  package Paquete_Semaforos is new Semaforos;
+  use Paquete_Semaforos;
+  Semaforo: TSemaforo;
+begin  -- Aquí se inicia la tarea de tipo TSemaforo (objeto Semaforo).
+   -- ...
+   Wait (Semaforo);
+   -- ...
+   Signal (Semaforo);
+   -- ...
+end Prueba_Semaforos;
+
+
+            </pre>
+        </div>
+    </body>
+</html>
